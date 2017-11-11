@@ -1,0 +1,67 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.login" />
+	
+	<bean id="loginDAO" class="com.login.dao.impl.LoginDAOImpl"/>
+	<bean id="loginService" class="com.login.service.impl.LoginServiceImpl"/>
+	<bean id="employeeDAO" class="com.login.dao.impl.EmployeeDAOImpl"/>
+	<bean id="employeeService" class="com.login.service.impl.EmployeeServiceImpl"/>
+	<bean id="organizationDAO" class="com.login.dao.impl.OrganizationDAOImpl"/>
+	<bean id="organizationService" class="com.login.service.impl.OrganizationServiceImpl"/>
+	<bean id="branchDAO" class="com.login.dao.impl.BranchDAOImpl"/>
+	<bean id="branchService" class="com.login.service.impl.BranchServiceImpl"/>
+	<bean id="loanHelper" class="com.loan.helper.LoanHelper"/>
+	<bean id="sessionValueDAO" class="com.login.dao.impl.SessionValueDAOImpl"/>
+	<bean id="sessionValueService" class="com.login.service.impl.SessionValueServiceImpl"/>
+	<bean id="paydayService" class="com.login.service.impl.PaydayServiceImpl"/>
+	<bean id="paydayDAO" class="com.login.dao.impl.PaydayDAOImpl"/>
+	<bean id="salaryFrequencyService" class="com.login.service.impl.SalaryFrequencyServiceImpl"/>
+	<bean id="salaryFrequencyDAO" class="com.login.dao.impl.SalaryFrequencyDAOImpl"/>
+	<bean id="customerService" class="com.login.service.impl.CustomerServiceImpl"/>
+	<bean id="customerDAO" class="com.login.dao.impl.CustomerDAOImpl"/>
+		
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>		
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<context:component-scan base-package="com.login" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${database.driverClass}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.username}"/>
+		<property name="password" value="${database.password}"/>
+
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:hibernate.cfg.xml" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="persistenceExceptionTranslationPostProcessor"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:annotation-driven/>
+</beans>

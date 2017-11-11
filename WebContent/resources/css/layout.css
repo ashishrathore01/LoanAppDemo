@@ -1,0 +1,165 @@
+html {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;		
+	font-weight: normal;
+	background-color: #E6E6FA;
+	height: 100%;
+	position: relative;
+	background-image:url(../images/entire_body.png);	
+}
+
+.main-container {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	height: auto !important;
+	min-height: 100%;
+}
+
+.header {	
+	padding-bottom: 5px;
+    margin: auto;
+    width: 1352px;
+    height: 100px;
+    background-image:url(../images/footer-color.PNG);
+}
+
+.header-logo {
+	margin-left:5px;
+	padding-top:5px;
+	position: absolute;
+}
+
+.menu-container {
+	margin: auto;
+    padding: 0px;
+    height: 37px;
+    width: 1350px;
+	background-image:url(../images/menu_color.png);
+}
+
+/* Menu Navigation CSS Start */
+
+.menu-navigation {
+	padding: 0px;
+	margin: auto;
+	width: 1190px;
+	height: 37px;
+	background-image:url(../images/menu_color.png);
+	
+}
+
+/* Menu Navigation CSS End */
+
+/* Sub Menu Navigation CSS Start */
+
+.inputform div:hover {
+	background-image:url(../images/sub-menu-hover.png);
+}
+
+/* Sub Menu Navigation CSS End */
+
+.sub-header-container {
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 100%;	
+}
+
+.sub-header {
+	padding: 0px;
+	margin: auto;
+	width: 1190px;
+	height: 100%;
+	background-image:url(../images/sub-menu-all-color.png);		
+}
+
+.body-container {
+	border:1px solid;
+	margin: auto;
+	padding: 0px;
+	width: 1350px;
+	background-position: top;
+}
+
+.body-content {
+	padding: 0px;
+	margin: auto;
+	width: 1148px;
+	background-color: #FFFFFF;
+	height: 100%;
+	margin-left: 201px;
+}
+
+.footer-container {
+	border:1px solid;
+	padding: 0px;
+	margin: auto;
+	width: 1350px;
+	background-image:url(../images/footer-color.PNG);
+}
+
+.footer-content {
+	padding: 0px 0px;
+	margin: auto;
+	width: 1190px;
+	height: 50px;
+}
+
+
+/*	Customer Input Form CSS Start*/
+
+.rh{
+      background-color:silver;
+      color:white;
+      font-weight: bold;
+      height: 20px;
+}
+
+td{
+	padding-left: 5px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+select{
+	width:140px;
+	text-align:center;
+	
+}
+.txtRight{
+	text-align:right;
+}
+
+.addbtn,.btns,.txtCenter,.rmvBtn{
+	text-align:center;
+}
+.add,.addbtn,.removebtn,.removebtnTool,.addTool,.sbmt,.rst,.cal{	
+	background-image:url(../images/sub-menu-hover.PNG);
+	color:white;
+	height: 30px;
+}
+
+/* Customer Input Form CSS End */
+
+/* Management Variable CSS Start */
+
+.dbt,.hd{
+	
+	background-color:silver;
+	color:White;
+	height: 20px;
+}
+
+/* select{
+	width:150px;
+} */
+
+/*	Management Variable CSS End	*/

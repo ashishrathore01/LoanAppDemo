@@ -1,0 +1,155 @@
+/* @CHARSET "ISO-8859-1";
+MENU
+#nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#nav li a, #nav li {
+	float: left;
+}
+
+#nav li {
+	list-style: none;
+	position: relative;
+}
+
+#nav li a {
+	padding: 10px 2em;
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	height: 15px;
+}
+
+#nav li a:hover {
+	background-image:url(../images/sub-menu-color.PNG);
+}
+
+#nav li ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	padding: 0;
+	margin: 0;
+	background-image:url(../images/sub-menu-color.PNG);
+	
+}
+
+#nav li:hover>ul {
+	display: block;
+}
+
+#nav li ul li, #nav li ul li a {
+	float: none;
+}
+
+#nav li ul li {
+	_display: inline; for IE6
+}
+
+#nav li ul li a {
+	width: 150px;
+	display: block;
+}
+
+#nav li ul li a:hover {
+	width: 150px;
+	display: block;
+	background-image:url(../images/sub-menu-hover.PNG);
+}
+SUBSUB Menu
+#nav li ul li ul {
+	display: none;
+}
+
+#nav li ul li:hover ul {
+	left: 100%;
+	top: 0;
+}
+#nav
+ 
+li
+ 
+ul */
+
+/* MENU */
+#myInput {
+    background-image: url(/css/searchicon.png);
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 151px;
+    font-size: 16px;
+    padding: 5px 20px 5px 10px;
+    border: 1px solid #ddd;
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 13px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+/* #myUL li a.header1 {
+    background-color: #e2e2e2; Add a darker background color for headers
+    cursor: default; Change cursor style
+} */
+
+#myUL li a:hover {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+/* Sub Input Search*/
+
+#mySubInput {
+    background-image: url(/css/searchicon.png);
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 151px;
+    font-size: 16px;
+    padding: 5px 20px 5px 10px;
+    border: 1px solid #ddd;
+}
+
+#mySubUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mySubUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 13px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+/* #myUL li a.header1 {
+    background-color: #e2e2e2; Add a darker background color for headers
+    cursor: default; Change cursor style
+} */
+
+#mySubUL li a:hover {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
